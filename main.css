@@ -5,6 +5,7 @@
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
     position: relative;
     /* max-width: 1200px;
     margin: 0 auto; */
@@ -20,6 +21,7 @@ body {
 .header {
     position: absolute;
     width: 100%;
+    
 }
 
 .header .wrap {
@@ -52,8 +54,8 @@ body {
 
 .main {
     width: 100%;
-    height: 600px;
-    background: rgb(144, 222, 233);
+    height: 550px;
+    background: url('img/y3463.jpg') no-repeat center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,6 +77,10 @@ body {
 
 /* NAV  >>> */
 
+a {
+    text-decoration: none;
+}
+
 .nav {
     width: 100%;
 }
@@ -82,12 +88,94 @@ body {
 .nav .wrap {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .menu-item {
+    min-width: 200px;
     width: 33%;
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 5vw;
 }
+
+.menu-item span {
+    font-weight: bold;
+    font-size: 18px;
+    color: #222b4b;
+    text-transform: uppercase;
+}
+
+.menu-item__head {
+    height: 170px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    
+}
+
+
+.menu-item__content p a {
+    font-size: 14px;
+    color: #222b4b;
+}
+
+.menu-item-1 .menu-item__head {
+    background: url('img/bankruptcy.jpg') no-repeat center;
+}
+
+.menu-item-1 .menu-item__head span {
+    padding-right: 100px;
+    margin-bottom: 15px;
+}
+
+.menu-item-2 .menu-item__head {
+    background: url('img/business.jpg') no-repeat center;
+}
+
+.menu-item-2 .menu-item__head span {
+    padding-right: 130px;
+}
+
+.menu-item-3 .menu-item__head {
+    background: url('img/private.jpg') no-repeat center;
+}
+
+.menu-item-3 .menu-item__head span {
+    padding-right: 80px;
+}
+
+.menu-item-4 .menu-item__head {
+    background: url('img/remote.jpg') no-repeat center;
+}
+
+.menu-item-4 .menu-item__head span {
+    padding-right: 25px;
+    margin-bottom: 5px;
+}
+
+.menu-item-5 .menu-item__head {
+    background: url('img/cooperation.jpg') no-repeat 0%;
+}
+
+.menu-item-5 .menu-item__head span {
+    padding-right: 80px;
+    margin-bottom: 30px;
+}
+
+.menu-item-6 .menu-item__head {
+    background: url('img/special.jpg') no-repeat center;
+}
+
+.menu-item-6 .menu-item__head span {
+    padding-right: 50px;
+    margin-bottom: 5px;
+}
+
 
 /* <<<  NAV */
 

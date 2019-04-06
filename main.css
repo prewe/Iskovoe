@@ -21,7 +21,7 @@ body {
 .header {
     position: absolute;
     width: 100%;
-    
+    padding-top: 35px;
 }
 
 .header .wrap {
@@ -31,6 +31,8 @@ body {
 
 .logo span {
     font-size: 28px;
+    font-weight: bold;
+    color: #222b4b;
     position: relative;
     letter-spacing: 1px;
 }
@@ -39,12 +41,41 @@ body {
     content: 'Юридическая компания';
     position: absolute;
     font-size: 10px;
-    letter-spacing: normal;
-    top: 100%;
+    font-weight: normal;
+    letter-spacing: .5px;
+    top: 80%;
+    left: 1px;
+}
+
+.logo span::after {
+    content: url(img/logo.png);
+    position: absolute;
+    top: 3px;
 }
 
 .contacts {
     display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 18px;
+    color: #67c8f0;
+}
+
+.address {
+    position: relative;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.address b {
+    font-size: 17px;
+}
+
+.address::before {
+    content: url(img/marker.png);
+    position: absolute;
+    left: -30px;
+    top: 5px;
 }
 
 /* <<<  HEADER */

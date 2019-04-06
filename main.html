@@ -104,17 +104,17 @@
                 <div class="news-1">
                     <h2>Компания под следствием. Что делать?</h2>
                     <p>С чего начинать нервничать? Стандартное доследственное мероприятие: "осмотр места происшествия" у юридического лица с изъятием документов и электронных носителей...</p>
-                    <span>Подробнее...</span>
+                    <a href="#"><span>Подробнее...</span></a>
                 </div>
                 <div class="news-2">
                     <h2>О наследовании долей и акций.</h2>
                     <p>Прошлый год дал возможность разобрать несколько ситуаций и поделиться "тупиковыми ситуациями". Проверяйте и свои компании...</p>
-                    <span>Подробнее...</span>
+                    <a href="#"><span>Подробнее...</span></a>
                 </div>
                 <div class="news-3">
                     <h2>Урегулирование спора расторгающих брак.</h2>
                     <p>Компания завершила медиацию (внесудебное урегулирование спора) расторгающих брак супругов бизнесменов, доказав нотариусам при заверении соглашений...</p>
-                    <span>Подробнее...</span>
+                    <a href="#"><span>Подробнее...</span></a>
                 </div>
             </div>
         </div>
@@ -144,7 +144,11 @@
             <div class="footer-contacts">
                 <div class="footer-contacts__address">634034 Томск <br> ул.Красноармейская, 15</div>
                 <div class="footer-contacts__telephone">Телефон: <br> +7(3822)12-34-56 <br> +7(3822)78-91-11 <br> +7(3822)43-65-21</div>
-                <div class="footer-contacts__social">social</div>
+                <div class="footer-contacts__social">
+                    <a href="#"><img src="img/vk.png" alt="vk"></a>
+                    <a href="#"><img src="img/insta.png" alt="insta"></a>
+                    <a href="#"><img src="img/fb.png" alt="fb"></a>
+                </div>
             </div>
         </div>
     </footer>
@@ -160,7 +164,21 @@
             $('.news-carousel').slick({
                 autoplay: true,
                 arrows: false,
-                slidesToShow: 3
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 1000,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
             });
         });
 

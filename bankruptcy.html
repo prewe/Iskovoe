@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Банкротство</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="wrap">
+            <div class="logo">
+                <a href="main.html"><span>Исковое</span></a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#" class="active-page">Банкротство</a></li>
+                    <li><a href="#">Для бизнеса</a></li>
+                    <li><a href="#">Частным клиентам</a></li>
+                    <li><a href="#">Дистанционный юрист</a></li>
+                    <li><a href="#">Сотрудничество</a></li>
+                </ul>
+            </nav>
+            <div class="contacts hide-contacts">
+                <div class="address">ул.Красноармейская 15 <br><b>8-800-100-10-00</b></div>
+                <div class="social">
+                    <a href="#"><img src="img/vk.png" alt="vk"></a>
+                    <a href="#"><img src="img/insta.png" alt="insta"></a>
+                    <a href="#"><img src="img/fb.png" alt="fb"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main bankruptcy">
+        <div class="wrap">
+            <h1>Банкротство</h1>
+        </div>
+    </main>
+
+    <section class="info">
+        <div class="wrap">
+            <button class="accordion">Банкротство юридических лиц</button>
+            <div class="panel">
+                <p><a name="first"></a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores voluptate tenetur qui minus nisi magnam magni non aliquid praesentium perferendis corrupti quo atque eum repudiandae aperiam sapiente, molestiae doloribus.</p>
+            </div>
+            <button class="accordion">Банкротство физических лиц</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores voluptate tenetur qui minus nisi magnam magni non aliquid praesentium perferendis corrupti quo atque eum repudiandae aperiam sapiente, molestiae doloribus.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-menu">
+                <div class="footer-menu-1">
+                    <ul>
+                        <li>Главная</li>
+                        <li>Новости компании</li>
+                        <li>Контакты</li>
+                    </ul>
+                </div>
+                <div class="footer-menu-2">
+                    <ul>
+                        <li>Банкротство</li>
+                        <li>Для бизнеса</li>
+                        <li>Частным клиентам</li>
+                        <li>Дистанционный юрист</li>
+                        <li>Сотрудничество</li>
+                        <li>Спецпредложения</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contacts">
+                <div class="footer-contacts__address">634034 Томск <br> ул.Красноармейская, 15</div>
+                <div class="footer-contacts__telephone">Телефон: <br> +7(3822)12-34-56 <br> +7(3822)78-91-11 <br> +7(3822)43-65-21</div>
+                <div class="footer-contacts__social">
+                    <a href="#"><img src="img/vk.png" alt="vk"></a>
+                    <a href="#"><img src="img/insta.png" alt="insta"></a>
+                    <a href="#"><img src="img/fb.png" alt="fb"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight){
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+    }
+    
+    </script>
+
+</body>
+</html>

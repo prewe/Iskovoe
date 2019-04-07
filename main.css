@@ -155,7 +155,7 @@ a {
 }
 
 .menu-item-1 .menu-item__head {
-    background: url('img/bankruptcy.jpg') no-repeat center;
+    background: url('img/bankruptcy-menu.jpg') no-repeat center;
 }
 
 .menu-item-1 .menu-item__head span {
@@ -322,6 +322,95 @@ ul {
 
 
 
+
+
+
+
+
+
+/* BANKRUPTCY  >>> */
+
+.bankruptcy {
+    background: url('img/bankruptcy.jpg') no-repeat center;
+}
+
+.bankruptcy h1 {
+    font-size: 80px;
+}
+
+.header-nav {
+    margin-right: 20vw;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-nav ul li {
+    width: 30%;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: end; 
+}
+
+.header-nav ul li a {
+    position: relative; 
+    color: #222b4b;
+    z-index: 5;
+}
+
+.active-page::after {
+    content: '';
+    width: 104%;
+    height: 50%;
+    background: #67c8f0;
+    position: absolute;
+    bottom: 0;
+    left: -2%;
+    z-index: -1;
+}
+
+.hide-contacts {
+    display: none;
+}
+
+.info {
+    margin: 50px 0;
+}
+
+.accordion {
+    background-color: #222b4b;
+    color: #fff;
+    cursor: pointer;
+    padding: 16px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.active, .accordion:hover {
+    background-color: #67c8f0;
+}
+
+.panel {
+    padding: 0 18px;
+    color: #212121;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* <<<  BANKRUPTCY */
+
+
+
+
 /* MEDIA */
 
 @media screen and (max-width: 1000px) {
@@ -331,22 +420,41 @@ ul {
 
 }
 
+@media screen and (max-width: 1100px) {
+    .header-nav { margin-right: 15vw; }
+    .header-nav ul li { font-size: 10px; }
+}
+
 @media screen and (max-width: 640px) {
     .header .wrap { flex-direction: column; }
     .contacts { margin-right: 0; flex-direction: column; align-items: flex-start; }
     .address::before { content: ''; }
     .menu-item { flex-basis: 100%; } 
-    /* .menu-item__wrap { align-items: center; display: flex; flex-direction: column; } */
     .main h1 { font-size: 28px; }
     .news { margin-top: 40px; }
     .news .wrap h1 { font-size: 20px; margin-bottom: 20px; }
     .footer .wrap { flex-direction: column; }
     .footer-contacts { margin-top: 30px; }
+    .header-nav { margin-top: 30px; }
+    .header-nav ul { justify-content: flex-start; }
+    .header-nav ul li { text-align: left; font-size: 14px; width: 90%; }
+    .accordion { width: 100%; }
     
 }
 
 @media screen and (max-width: 400px) {
     .footer-contacts__address { font-size: 16px; }
     .news .wrap h1 { font-size: 18px; }
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .header-nav { margin-right: 5vw; }
+}
+
+@media screen and (max-width: 680px) {
+    .header-nav { margin-right: 2vw; }
 }
 

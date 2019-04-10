@@ -1,3 +1,46 @@
+@font-face {
+
+    font-family: 'MyriadPro';
+    
+    src: url('fonts/MyriadPro-Regular.eot');
+    
+    src: url('fonts/MyriadPro-Regular.eot?iefix') format('eot'),
+    
+    url('fonts/MyriadPro-Regular.woff') format('woff'),
+    
+    url('fonts/MyriadPro-Regular.ttf') format('truetype'),
+    
+    url('fonts/MyriadPro-Regular.svg') format('svg');
+    
+    font-weight: normal;
+    
+    font-style: normal;
+    
+}
+
+@font-face {
+
+    font-family: 'MyriadPro';
+    
+    src: url('fonts/MyriadPro-Bold.eot');
+    
+    src: url('fonts/MyriadPro-Bold.eot?iefix') format('eot'),
+    
+    url('fonts/MyriadPro-Bold.woff') format('woff'),
+    
+    url('fonts/MyriadPro-Bold.ttf') format('truetype'),
+    
+    url('fonts/MyriadPro-Bold.svg') format('svg');
+    
+    font-weight: bold;
+    
+    font-style: normal;
+    
+}
+    
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,29 +48,34 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'MyriadPro';
     position: relative;
     color: #222b4b;
-    /* max-width: 1200px;
-    margin: 0 auto; */
-}
-
-.wrap {
-    width: 80%;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
+
 /* HEADER  >>> */
+
+.header-wrap {
+    width: 65%;
+    margin: 0 auto;
+}
 
 .header {
     position: absolute;
     width: 100%;
-    padding-top: 35px;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
 }
 
-.header .wrap {
+.header-wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    
 }
 
 .logo span {
@@ -57,9 +105,8 @@ body {
 .contacts {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    margin-right: 18px;
-    color: #67c8f0;
+    color: #222b4b;
+    margin-left: 20px;
 }
 
 .address {
@@ -76,7 +123,7 @@ body {
     content: url(img/marker.png);
     position: absolute;
     left: -30px;
-    top: 5px;
+    top: 0px;
 }
 
 /* <<<  HEADER */
@@ -84,10 +131,16 @@ body {
 
 /* MAIN  >>> */
 
+.main-wrap {
+    width: 65%;
+    margin: 0 auto;
+}
+
 .main {
     width: 100%;
     height: 550px;
     background: url('img/y3463.jpg') no-repeat center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,7 +171,9 @@ a {
     width: 100%;
 }
 
-.nav .wrap {
+.nav-wrap {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -131,9 +186,9 @@ a {
     align-items: center; 
 }
 
-.menu-item span {
+.menu-item h2 {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
     text-transform: uppercase;
 }
 
@@ -150,7 +205,7 @@ a {
 
 
 .menu-item__content p a {
-    font-size: 14px;
+    font-size: 16px;
     color: #222b4b;
 }
 
@@ -158,7 +213,7 @@ a {
     background: url('img/bankruptcy-menu.jpg') no-repeat center;
 }
 
-.menu-item-1 .menu-item__head span {
+.menu-item-1 .menu-item__head h2 {
     padding-right: 100px;
     margin-bottom: 15px;
 }
@@ -167,7 +222,7 @@ a {
     background: url('img/business.jpg') no-repeat center;
 }
 
-.menu-item-2 .menu-item__head span {
+.menu-item-2 .menu-item__head h2 {
     padding-right: 130px;
 }
 
@@ -175,7 +230,7 @@ a {
     background: url('img/private.jpg') no-repeat center;
 }
 
-.menu-item-3 .menu-item__head span {
+.menu-item-3 .menu-item__head h2 {
     padding-right: 80px;
 }
 
@@ -183,7 +238,7 @@ a {
     background: url('img/remote.jpg') no-repeat center;
 }
 
-.menu-item-4 .menu-item__head span {
+.menu-item-4 .menu-item__head h2 {
     padding-right: 25px;
     margin-bottom: 5px;
 }
@@ -192,7 +247,7 @@ a {
     background: url('img/cooperation.jpg') no-repeat 0%;
 }
 
-.menu-item-5 .menu-item__head span {
+.menu-item-5 .menu-item__head h2 {
     padding-right: 80px;
     margin-bottom: 30px;
 }
@@ -201,7 +256,7 @@ a {
     background: url('img/special.jpg') no-repeat center;
 }
 
-.menu-item-6 .menu-item__head span {
+.menu-item-6 .menu-item__head h2 {
     padding-right: 50px;
     margin-bottom: 5px;
 }
@@ -216,20 +271,24 @@ a {
     margin-bottom: 50px;
 }
 
-.news .wrap {
+.news-wrap {
+    width: 65%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.news .wrap h1 {
+.news__header {
     display: inline-block;
     position: relative;
     font-size: 30px;
+    font-weight: bold;
     margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
-.news .wrap h1::after {
+.news__header::after {
     content: '';
     width: 104%;
     height: 30%;
@@ -246,12 +305,12 @@ a {
 }
 
 .news p {
-    font-size: 11px;
+    font-size: 14px;
     margin: 10px 0;
 }
 
-.news span {
-    font-size: 12px;
+.news__button {
+    font-size: 16px;
     text-transform: uppercase;
     color: #67c8f0;
 }
@@ -291,7 +350,9 @@ ul {
     color: white;
 }
 
-.footer .wrap {
+.footer-wrap {
+    width: 65%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -299,7 +360,7 @@ ul {
 .footer-menu {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .footer-menu-1 {
@@ -332,6 +393,7 @@ ul {
 
 .bankruptcy {
     background: url('img/bankruptcy.jpg') no-repeat center;
+    background-size: cover;
 }
 
 .bankruptcy h1 {
@@ -339,7 +401,8 @@ ul {
 }
 
 .header-nav {
-    margin-right: 20vw;
+    max-width: 450px;
+    
 }
 
 .header-nav ul {
@@ -349,10 +412,10 @@ ul {
 }
 
 .header-nav ul li {
-    width: 30%;
     font-size: 14px;
     text-transform: uppercase;
     text-align: end; 
+    margin: 0 20px;
 }
 
 .header-nav ul li a {
@@ -378,6 +441,11 @@ ul {
 
 .info {
     margin: 50px 0;
+}
+
+.info-wrap {
+    width: 65%; 
+    margin: 0 auto;
 }
 
 .accordion {
@@ -420,41 +488,34 @@ ul {
 
 }
 
-@media screen and (max-width: 1100px) {
-    .header-nav { margin-right: 15vw; }
-    .header-nav ul li { font-size: 10px; }
+@media screen and (max-width: 1200px) {
+    .header-wrap, .main-wrap, .nav-wrap, .news-wrap, .footer-wrap, .info-wrap { width: 80%; }
 }
 
-@media screen and (max-width: 640px) {
-    .header .wrap { flex-direction: column; }
-    .contacts { margin-right: 0; flex-direction: column; align-items: flex-start; }
+@media screen and (max-width: 680px) {
+    .header-wrap { flex-direction: column; width: 80%; align-items: flex-start; }
+    .contacts { margin-top: 20px; flex-direction: column; align-items: flex-start; }
     .address::before { content: ''; }
+    .main-wrap { width: 80%; }
     .menu-item { flex-basis: 100%; } 
     .main h1 { font-size: 28px; }
     .news { margin-top: 40px; }
-    .news .wrap h1 { font-size: 20px; margin-bottom: 20px; }
-    .footer .wrap { flex-direction: column; }
+    .news__header { font-size: 20px; margin-bottom: 20px; }
+    .footer-wrap { flex-direction: column; }
     .footer-contacts { margin-top: 30px; }
     .header-nav { margin-top: 30px; }
     .header-nav ul { justify-content: flex-start; }
     .header-nav ul li { text-align: left; font-size: 14px; width: 90%; }
     .accordion { width: 100%; }
+    .bankruptcy h1 { margin-top: 100px; }
     
 }
 
 @media screen and (max-width: 400px) {
     .footer-contacts__address { font-size: 16px; }
-    .news .wrap h1 { font-size: 18px; }
+    .news__header { font-size: 18px; }
+    .footer-menu { font-size: 14px; }
 }
 
 
-
-
-@media screen and (max-width: 800px) {
-    .header-nav { margin-right: 5vw; }
-}
-
-@media screen and (max-width: 680px) {
-    .header-nav { margin-right: 2vw; }
-}
 

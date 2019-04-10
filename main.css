@@ -56,11 +56,17 @@ body {
 }
 
 
+
+
 /* HEADER  >>> */
 
 .header-wrap {
     width: 65%;
     margin: 0 auto;
+}
+
+a {
+    color: #222b4b;
 }
 
 .header {
@@ -348,6 +354,10 @@ ul {
     background: #2c3f89;
     padding: 50px 0;
     color: white;
+}
+
+.footer a {
+    color: #fff;
 }
 
 .footer-wrap {

@@ -37,6 +37,26 @@
     font-style: normal;
     
 }
+
+@font-face {
+
+    font-family: 'GretaTextPro';
+    
+    src: url('fonts/GretaTextPro\ Bold.eot');
+    
+    src: url('fonts/GretaTextPro\ Bold.eot?iefix') format('eot'),
+    
+    url('fonts/GretaTextPro\ Bold.woff') format('woff'),
+    
+    url('fonts/GretaTextPro\ Bold.ttf') format('truetype'),
+    
+    url('fonts/GretaTextPro\ Bold.svg') format('svg');
+    
+    font-weight: bold;
+    
+    font-style: normal;
+    
+}
     
 
 
@@ -118,7 +138,7 @@ a {
 .address {
     position: relative;
     margin-right: 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .address b {
@@ -150,18 +170,19 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'GretaTextPro', serif;
 }
 
 .main h1 {
-    font-size: 40px;
-    line-height: 42px;
+    font-size: 70px;
+    line-height: 70px;
     text-transform: uppercase;
 }
 
 .main p {
     margin-top: 10px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 26px;
     font-weight: bold;
 }
 
@@ -206,6 +227,7 @@ a {
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 50px;
+    font-family: 'GretaTextPro', serif;
     
 }
 
@@ -214,6 +236,10 @@ a {
     font-size: 16px;
     color: #222b4b;
 }
+.menu-item__content p a:hover {
+    text-decoration: underline;
+}
+
 
 .menu-item-1 .menu-item__head {
     background: url('img/bankruptcy-menu.jpg') no-repeat center;
@@ -292,6 +318,7 @@ a {
     font-weight: bold;
     margin-bottom: 50px;
     text-transform: uppercase;
+    font-family: 'GretaTextPro', serif;
 }
 
 .news__header::after {
@@ -308,6 +335,7 @@ a {
 .news h2 {
     font-size: 21px;
     text-transform: uppercase;
+    font-family: 'GretaTextPro', serif;
 }
 
 .news p {
@@ -319,6 +347,10 @@ a {
     font-size: 16px;
     text-transform: uppercase;
     color: #67c8f0;
+}
+
+.news__button:hover {
+    text-decoration: underline;
 }
 
 .news-carousel {
@@ -358,6 +390,10 @@ ul {
 
 .footer a {
     color: #fff;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 .footer-wrap {
@@ -459,21 +495,38 @@ ul {
 }
 
 .accordion {
-    background-color: #222b4b;
-    color: #fff;
+    position: relative;
+    background-color: #fff;
+    color: #222b4b;
     cursor: pointer;
     padding: 16px;
-    width: 50%;
+    width: 100%;
     border: none;
+    border-top: 2px solid #dcdcdc;
     text-align: left;
     outline: none;
-    font-size: 18px;
+    font-size: 30px;
     transition: 0.5s;
 }
 
-.active, .accordion:hover {
-    background-color: #67c8f0;
+
+.borderfix {
+    width: 100%;
+    border-top: 2px solid #dcdcdc;
 }
+
+.arrow {
+    position: absolute;
+    top: 30%;
+    transform: rotate(135deg);
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #222b4b;
+    border-right: 3px solid #222b4b;
+}
+
+
 
 .panel {
     padding: 0 18px;
@@ -504,11 +557,12 @@ ul {
 
 @media screen and (max-width: 680px) {
     .header-wrap { flex-direction: column; width: 80%; align-items: flex-start; }
-    .contacts { margin-top: 20px; flex-direction: column; align-items: flex-start; }
+    .contacts { margin-top: 20px; margin-left: 0; flex-direction: column; align-items: flex-start; }
     .address::before { content: ''; }
     .main-wrap { width: 80%; }
     .menu-item { flex-basis: 100%; } 
-    .main h1 { font-size: 28px; }
+    .main h1 { font-size: 36px; line-height: 38px; }
+    .main p { font-size: 20px; }
     .news { margin-top: 40px; }
     .news__header { font-size: 20px; margin-bottom: 20px; }
     .footer-wrap { flex-direction: column; }
@@ -518,6 +572,7 @@ ul {
     .header-nav ul li { text-align: left; font-size: 14px; width: 90%; }
     .accordion { width: 100%; }
     .bankruptcy h1 { margin-top: 100px; }
+    .borderfix { width: 100%; }
     
 }
 
@@ -525,6 +580,8 @@ ul {
     .footer-contacts__address { font-size: 16px; }
     .news__header { font-size: 18px; }
     .footer-menu { font-size: 14px; }
+    .main h1 { font-size: 30px; line-height: 30px; }
+    .main p { font-size: 20px; }
 }
 
 

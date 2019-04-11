@@ -43,11 +43,11 @@
 
     <section class="info">
         <div class="info-wrap">
-            <button class="accordion">Банкротство юридических лиц</button>
-            <div class="panel">
+            <button class="accordion" id="info-1">Банкротство юридических лиц</button>
+            <div class="panel" >
                 <p><a name="first"></a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores voluptate tenetur qui minus nisi magnam magni non aliquid praesentium perferendis corrupti quo atque eum repudiandae aperiam sapiente, molestiae doloribus.</p>
             </div>
-            <button class="accordion">Банкротство физических лиц</button>
+            <button class="accordion" id="info-2">Банкротство физических лиц</button>
             <div class="panel">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores voluptate tenetur qui minus nisi magnam magni non aliquid praesentium perferendis corrupti quo atque eum repudiandae aperiam sapiente, molestiae doloribus.</p>
             </div>
@@ -87,22 +87,35 @@
         </div>
     </footer>
 
-    <script>
-    
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight){
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            } 
-        });
-    }
+    <script>
+
+        // var anchor = window.location.hash.split('#');
+        // if(anchor[1] != ''){$('.panel').slideUp(); $('#'+anchor[1]).slideDown();}
+
+        
+
+        
+    
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+
+        var anchor = window.location.hash.split('#');
+        if(anchor[1] != ''){$('#'+anchor[1]).trigger('click');}
     
     </script>
 

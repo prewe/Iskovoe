@@ -43,14 +43,19 @@
 
     <section class="info">
         <div class="info-wrap">
-            <button class="accordion" id="info-1">Банкротство юридических лиц</button>
+            <button class="accordion" id="info-1">Банкротство юридических лиц
+                <div class="arrow"></div>
+            </button>
             <div class="panel" >
                 <p><a name="first"></a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores voluptate tenetur qui minus nisi magnam magni non aliquid praesentium perferendis corrupti quo atque eum repudiandae aperiam sapiente, molestiae doloribus.</p>
             </div>
-            <button class="accordion" id="info-2">Банкротство физических лиц</button>
+            <button class="accordion" id="info-2">Банкротство физических лиц
+                <div class="arrow"></div>
+            </button>
             <div class="panel">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores voluptate tenetur qui minus nisi magnam magni non aliquid praesentium perferendis corrupti quo atque eum repudiandae aperiam sapiente, molestiae doloribus.</p>
             </div>
+            <div class="borderfix"></div>
         </div>
     </section>
 
@@ -104,7 +109,6 @@
 
         for (i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
                 var panel = this.nextElementSibling;
                 if (panel.style.maxHeight){
                     panel.style.maxHeight = null;

@@ -138,7 +138,7 @@ a {
 .address {
     position: relative;
     margin-right: 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .address b {
@@ -236,6 +236,10 @@ a {
     font-size: 16px;
     color: #222b4b;
 }
+.menu-item__content p a:hover {
+    text-decoration: underline;
+}
+
 
 .menu-item-1 .menu-item__head {
     background: url('img/bankruptcy-menu.jpg') no-repeat center;
@@ -345,6 +349,10 @@ a {
     color: #67c8f0;
 }
 
+.news__button:hover {
+    text-decoration: underline;
+}
+
 .news-carousel {
     width: 100%;
 }
@@ -382,6 +390,10 @@ ul {
 
 .footer a {
     color: #fff;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 .footer-wrap {
@@ -483,21 +495,37 @@ ul {
 }
 
 .accordion {
-    background-color: #222b4b;
-    color: #fff;
+    position: relative;
+    background-color: #fff;
+    color: #222b4b;
     cursor: pointer;
     padding: 16px;
     width: 50%;
     border: none;
+    border-top: 2px solid #222b4b;
     text-align: left;
     outline: none;
     font-size: 18px;
     transition: 0.5s;
 }
 
-.active, .accordion:hover {
-    background-color: #67c8f0;
+.borderfix {
+    width: 50%;
+    border-top: 2px solid #222b4b;
 }
+
+.arrow {
+    position: absolute;
+    top: 30%;
+    transform: rotate(135deg);
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #222b4b;
+    border-right: 3px solid #222b4b;
+}
+
+
 
 .panel {
     padding: 0 18px;
@@ -528,7 +556,7 @@ ul {
 
 @media screen and (max-width: 680px) {
     .header-wrap { flex-direction: column; width: 80%; align-items: flex-start; }
-    .contacts { margin-top: 20px; flex-direction: column; align-items: flex-start; }
+    .contacts { margin-top: 20px; margin-left: 0; flex-direction: column; align-items: flex-start; }
     .address::before { content: ''; }
     .main-wrap { width: 80%; }
     .menu-item { flex-basis: 100%; } 
@@ -543,6 +571,7 @@ ul {
     .header-nav ul li { text-align: left; font-size: 14px; width: 90%; }
     .accordion { width: 100%; }
     .bankruptcy h1 { margin-top: 100px; }
+    .borderfix { width: 100%; }
     
 }
 

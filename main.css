@@ -505,14 +505,10 @@ ul {
     border-top: 2px solid #dcdcdc;
     text-align: left;
     outline: none;
-    
+    font-size: 30px;
     transition: 0.5s;
 }
 
-.accordion h2 {
-    font-weight: normal;
-    font-size: 30px;
-}
 
 .borderfix {
     width: 100%;

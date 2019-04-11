@@ -174,15 +174,15 @@ a {
 }
 
 .main h1 {
-    font-size: 40px;
-    line-height: 42px;
+    font-size: 70px;
+    line-height: 70px;
     text-transform: uppercase;
 }
 
 .main p {
     margin-top: 10px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 26px;
     font-weight: bold;
 }
 
@@ -532,7 +532,8 @@ ul {
     .address::before { content: ''; }
     .main-wrap { width: 80%; }
     .menu-item { flex-basis: 100%; } 
-    .main h1 { font-size: 28px; }
+    .main h1 { font-size: 36px; line-height: 38px; }
+    .main p { font-size: 20px; }
     .news { margin-top: 40px; }
     .news__header { font-size: 20px; margin-bottom: 20px; }
     .footer-wrap { flex-direction: column; }
@@ -549,6 +550,8 @@ ul {
     .footer-contacts__address { font-size: 16px; }
     .news__header { font-size: 18px; }
     .footer-menu { font-size: 14px; }
+    .main h1 { font-size: 30px; line-height: 30px; }
+    .main p { font-size: 20px; }
 }
 
 

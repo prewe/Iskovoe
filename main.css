@@ -490,10 +490,7 @@ a {
     width: 100%;
 }
 
-.news-1,
-.news-2,
-.news-3,
-.news-4 {
+.news__item {
     padding: 20px;
     position: relative;
     padding: 0 20px;

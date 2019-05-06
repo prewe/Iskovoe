@@ -690,6 +690,12 @@ ul {
     height: 15px;
     border-top: 3px solid #222b4b;
     border-right: 3px solid #222b4b;
+    transition: .3s;
+}
+
+.animate-arrow {
+    transform: rotate(315deg);
+    transition: .3s;
 }
 
 .panel {

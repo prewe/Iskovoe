@@ -104,6 +104,7 @@
                 var panel = event.target.nextElementSibling;
                 var arrow = event.target.firstElementChild;
                 var closedPanel = document.querySelectorAll('.panel');
+                var closedArrow = document.querySelectorAll('.arrow');
                 console.log(closedPanel);
                 if (panel.style.maxHeight){
                     panel.style.maxHeight = null;
@@ -111,6 +112,9 @@
                 } else {
                     closedPanel.forEach(function(elem){
                         elem.style.maxHeight = null;
+                    });
+                    closedArrow.forEach(function(elem){
+                        elem.classList.remove("animate-arrow");
                     });
                     panel.style.maxHeight = panel.scrollHeight + "px";
                     arrow.classList.add("animate-arrow");

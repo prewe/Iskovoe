@@ -98,16 +98,20 @@
     <script>
 
         var acc = document.getElementsByClassName("accordion");
-        var i;
 
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                var panel = this.nextElementSibling;
-                var arrow = this.firstElementChild;
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function(event) {
+                var panel = event.target.nextElementSibling;
+                var arrow = event.target.firstElementChild;
+                var closedPanel = document.querySelectorAll('.panel');
+                console.log(closedPanel);
                 if (panel.style.maxHeight){
                     panel.style.maxHeight = null;
                     arrow.classList.remove("animate-arrow");
                 } else {
+                    closedPanel.forEach(function(elem){
+                        elem.style.maxHeight = null;
+                    });
                     panel.style.maxHeight = panel.scrollHeight + "px";
                     arrow.classList.add("animate-arrow");
                 } 

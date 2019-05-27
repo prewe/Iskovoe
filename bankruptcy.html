@@ -46,14 +46,14 @@
             <button class="accordion" id="info-1">Банкротство юридических лиц
                 <span class="arrow">&nbsp;</span>
             </button>
-            <div class="panel" >
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores voluptate tenetur qui minus nisi magnam magni non aliquid praesentium perferendis corrupti quo atque eum repudiandae aperiam sapiente, molestiae doloribus.</p>
+            <div class="panel" id="panel__info-1">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem explicabo quas, magnam quis ullam laborum vero iusto eligendi facilis dignissimos nihil voluptatem! Voluptatum ab beatae culpa? Molestias cupiditate doloribus unde odio, minima, temporibus quam corrupti quos aliquid et, repellat id facere? Adipisci veritatis est non optio quibusdam, ullam explicabo error? Id laborum dignissimos facilis nesciunt, amet aut, molestias optio libero corporis, facere nulla laudantium repellendus eligendi error quibusdam sunt necessitatibus. Provident distinctio quia natus reprehenderit dignissimos iure fuga aliquam, perferendis voluptatem placeat, nostrum labore, eum voluptatum animi temporibus alias rem nam voluptate aperiam neque. Consequuntur officiis aut magnam eos. Eius dignissimos cupiditate laboriosam dolores illum accusantium, consequatur inventore cumque architecto adipisci, quidem autem facere iusto vitae obcaecati sequi natus quis aperiam asperiores quisquam omnis accusamus. Qui, suscipit at! Enim laudantium maxime earum laborum sapiente vitae beatae porro impedit! Voluptas maxime illo exercitationem dolore sapiente soluta itaque deleniti. Numquam laudantium non eaque perspiciatis voluptate, sapiente aut saepe consequatur, vero dolores esse. Distinctio inventore enim at possimus optio iure rem ab modi, eum voluptatem aperiam dolore fugiat quae omnis iste et asperiores libero. Suscipit et corporis unde totam voluptates illo, possimus voluptas distinctio exercitationem minus quibusdam explicabo deserunt odio repellendus aperiam provident.</p>
             </div>
             <button class="accordion" id="info-2">Банкротство физических лиц
                 <span class="arrow">&nbsp;</span>
             </button>
-            <div class="panel">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolores voluptate tenetur qui minus nisi magnam magni non aliquid praesentium perferendis corrupti quo atque eum repudiandae aperiam sapiente, molestiae doloribus.</p>
+            <div class="panel" id="panel__info-2">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam sapiente dolore ducimus voluptate ipsum omnis, ratione repellendus animi pariatur ullam dolor possimus quasi adipisci corrupti repudiandae dolorum sit. Perspiciatis ullam ab culpa esse obcaecati illum iste atque veritatis aut labore quam nesciunt officia numquam quaerat architecto dolore consequuntur corporis autem nam, assumenda corrupti voluptas. Dolore totam, velit magni doloribus pariatur suscipit autem? Repellendus in blanditiis velit delectus architecto, aliquam asperiores vel facere qui cum odio quas? Et similique quidem totam magnam qui? Nemo, hic eveniet molestiae necessitatibus voluptates non inventore ex eligendi, magni voluptatum nihil aliquam animi atque perspiciatis minus ducimus quam, tempore quas dolorum assumenda rem! Voluptates commodi et ipsam officiis. Debitis nostrum dicta non, odit repudiandae eligendi doloribus quam ea tenetur. Ratione, soluta iusto! Assumenda possimus autem non vitae praesentium itaque laboriosam dolores porro, iusto impedit et fuga rem architecto? Ea recusandae ratione eum quo ab optio accusantium doloremque ipsam harum, deserunt cupiditate rerum sint voluptatem aliquam. Necessitatibus tempore quis impedit soluta odit accusantium illo voluptatibus commodi illum dolorum mollitia id, sapiente perferendis nihil explicabo itaque cum excepturi, eum veniam dolorem laborum quae eveniet incidunt. Dicta maiores, nihil provident, culpa, neque commodi natus excepturi voluptatum repellendus quae ipsum.</p>
             </div>
             <div class="borderfix"></div>
         </div>
@@ -99,12 +99,15 @@
 
         var acc = document.getElementsByClassName("accordion");
 
+        
+        
         for (var i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function(event) {
                 var panel = event.target.nextElementSibling;
                 var arrow = event.target.firstElementChild;
                 var closedPanel = document.querySelectorAll('.panel');
                 var closedArrow = document.querySelectorAll('.arrow');
+                var coords = getCoords(arrow);
                 if (panel.style.maxHeight){
                     panel.style.maxHeight = null;
                     arrow.classList.remove("animate-arrow");
@@ -117,9 +120,22 @@
                     });
                     panel.style.maxHeight = panel.scrollHeight + "px";
                     arrow.classList.add("animate-arrow");
+                    window.scrollTo(coords.left, 700);
+                    console.log(coords.top);
+                    
                 } 
+                function getCoords(elem) { 
+                    var box = elem.getBoundingClientRect();
+                    return {
+                        top: box.top + pageYOffset,
+                        left: box.left + pageXOffset
+                    };
+                }
             });
         }
+        
+
+        
 
         var anchor = window.location.hash.split('#');
         if(anchor[1] != ''){$('#'+anchor[1]).trigger('click');}
